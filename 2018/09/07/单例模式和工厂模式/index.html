@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。 Web MVC各部分的功能：1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。2.View：用于封装结果，生成页面html内容与用户进行交互。3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。 MVT： Django 遵循MV">
+<meta name="description" content="单例模式单例模式是一中常见的软件设计模式 ，该模式的主要目的是确保某个类只有一个实例存在。可以减少内存资源的浪费。 在python中实现单例的方法1.使用模块2.使用new3.使用装饰器（decorator）4.使用元类（metaclass） 使用模块其实，Python 的模块就是天然的单例模式，因为模块在第一次导入时，会生成 .pyc 文件，当第二次导入时，就会直接加载 .pyc 文件，而不会再">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVT与MCV">
-<meta property="og:url" content="http://ghost-guest@github.io/2018/09/06/MVT与MCV/index.html">
+<meta property="og:title" content="单例模式和工厂模式">
+<meta property="og:url" content="http://ghost-guest@github.io/2018/09/07/单例模式和工厂模式/index.html">
 <meta property="og:site_name" content="Z H">
-<meta property="og:description" content="MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。 Web MVC各部分的功能：1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。2.View：用于封装结果，生成页面html内容与用户进行交互。3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。 MVT： Django 遵循MV">
+<meta property="og:description" content="单例模式单例模式是一中常见的软件设计模式 ，该模式的主要目的是确保某个类只有一个实例存在。可以减少内存资源的浪费。 在python中实现单例的方法1.使用模块2.使用new3.使用装饰器（decorator）4.使用元类（metaclass） 使用模块其实，Python 的模块就是天然的单例模式，因为模块在第一次导入时，会生成 .pyc 文件，当第二次导入时，就会直接加载 .pyc 文件，而不会再">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-06T09:11:43.218Z">
+<meta property="og:updated_time" content="2018-09-08T13:03:00.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVT与MCV">
-<meta name="twitter:description" content="MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。 Web MVC各部分的功能：1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。2.View：用于封装结果，生成页面html内容与用户进行交互。3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。 MVT： Django 遵循MV">
+<meta name="twitter:title" content="单例模式和工厂模式">
+<meta name="twitter:description" content="单例模式单例模式是一中常见的软件设计模式 ，该模式的主要目的是确保某个类只有一个实例存在。可以减少内存资源的浪费。 在python中实现单例的方法1.使用模块2.使用new3.使用装饰器（decorator）4.使用元类（metaclass） 使用模块其实，Python 的模块就是天然的单例模式，因为模块在第一次导入时，会生成 .pyc 文件，当第二次导入时，就会直接加载 .pyc 文件，而不会再">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://ghost-guest@github.io/2018/09/06/MVT与MCV/"/>
+  <link rel="canonical" href="http://ghost-guest@github.io/2018/09/07/单例模式和工厂模式/"/>
 
 
 
 
 
-  <title>MVT与MCV | Z H</title>
+  <title>单例模式和工厂模式 | Z H</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ghost-guest@github.io/2018/09/06/MVT与MCV/">
+    <link itemprop="mainEntityOfPage" href="http://ghost-guest@github.io/2018/09/07/单例模式和工厂模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Z H">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MVT与MCV</h1>
+          <h1 class="post-title" itemprop="name headline">单例模式和工厂模式</h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T16:55:13+08:00">
-                2018-09-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T20:38:12+08:00">
+                2018-09-07
               </time>
             
 
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  206 字
+                  1.2k 字
                 </span>
               
 
@@ -376,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -397,10 +397,36 @@
       
 
       
-        <p>MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。</p>
-<h3 id="Web-MVC各部分的功能："><a href="#Web-MVC各部分的功能：" class="headerlink" title="Web MVC各部分的功能："></a>Web MVC各部分的功能：</h3><p>1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。<br>2.View：用于封装结果，生成页面html内容与用户进行交互。<br>3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。</p>
-<p>MVT： Django 遵循MVC设计，并有一个专有名词：MVT</p>
-<h3 id="MVT各部分的功能"><a href="#MVT各部分的功能" class="headerlink" title="MVT各部分的功能"></a>MVT各部分的功能</h3><p>1.Model： 负责与数据库交互，进行数据操作。<br>2.View：与MVC中的C的功能一样，接受请求，处理业务，返回应答。<br>3.Template： 与MVC中的V的功能一样，负责封装要返回的html。</p>
+        <h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>单例模式是一中常见的软件设计模式 ，该模式的主要目的是确保某个类只有一个实例存在。可以减少内存资源的浪费。</p>
+<h3 id="在python中实现单例的方法"><a href="#在python中实现单例的方法" class="headerlink" title="在python中实现单例的方法"></a>在python中实现单例的方法</h3><p>1.使用模块<br>2.使用<strong>new</strong><br>3.使用装饰器（decorator）<br>4.使用元类（metaclass）</p>
+<h3 id="使用模块"><a href="#使用模块" class="headerlink" title="使用模块"></a>使用模块</h3><p>其实，Python 的模块就是天然的单例模式，因为模块在第一次导入时，会生成 .pyc 文件，当第二次导入时，就会直接加载 .pyc 文件，而不会再次执行模块代码。因此，我们只需把相关的函数和数据定义在一个模块中，就可以获得一个单例对象了。如果我们真的想要一个单例类，可以考虑这样做：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># mysingleton.py</span><br><span class="line">class My_Singleton(object):</span><br><span class="line">    def foo(self):</span><br><span class="line">        pass</span><br><span class="line"> </span><br><span class="line">my_singleton = My_Singleton()</span><br></pre></td></tr></table></figure>
+<p>将上面的代码放到mysingleton.py中，然后这样使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mysingleton <span class="keyword">import</span> my_singleton</span><br><span class="line"> </span><br><span class="line">my_singleton.foo()</span><br></pre></td></tr></table></figure>
+<h3 id="使用new"><a href="#使用new" class="headerlink" title="使用new"></a>使用<strong>new</strong></h3><p>为了使类只能出现一个实例，我们可以使用 <strong>new</strong> 来控制实例的创建过程，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Singleton(object):</span><br><span class="line">    __instance = None</span><br><span class="line">    def __new__(cls, *args, **kw):</span><br><span class="line">        <span class="keyword">if</span> not cls._instance:</span><br><span class="line">            cls.__instance = <span class="keyword">super</span>(Singleton, cls).__new__(cls, *args, **kw)  </span><br><span class="line">        <span class="keyword">return</span> cls.__instance  </span><br><span class="line"> </span><br><span class="line">class MyClass(Singleton):  </span><br><span class="line">    a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>在上面的代码中，我们将类的实例和一个类变量 _instance 关联起来，如果 cls._instance 为 None 则创建实例，否则直接返回 cls._instance。<br>执行情况如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; one = MyClass()</span><br><span class="line">&gt;&gt;&gt; two = MyClass()</span><br><span class="line">&gt;&gt;&gt; one == two</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; one is two</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; id(one), id(two)</span><br><span class="line">(<span class="number">4303862608</span>, <span class="number">4303862608</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="使用装饰器"><a href="#使用装饰器" class="headerlink" title="使用装饰器"></a>使用装饰器</h3><p>我们知道，装饰器（decorator）可以动态地修改一个类或函数的功能。这里，我们也可以使用装饰器来装饰某个类，使其只能生成一个实例，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"> </span><br><span class="line">def singleton(cls):</span><br><span class="line">    instances = &#123;&#125;</span><br><span class="line">    @wraps(cls)</span><br><span class="line">    def getinstance(*args, **kw):</span><br><span class="line">        <span class="keyword">if</span> cls not <span class="keyword">in</span> instances:</span><br><span class="line">            instances[cls] = cls(*args, **kw)</span><br><span class="line">        <span class="keyword">return</span> instances[cls]</span><br><span class="line">    <span class="keyword">return</span> getinstance</span><br><span class="line"> </span><br><span class="line">@singleton</span><br><span class="line">class MyClass(object):</span><br><span class="line">    a = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>在上面，我们定义了一个装饰器 singleton，它返回了一个内部函数 getinstance，该函数会判断某个类是否在字典 instances 中，如果不存在，则会将 cls 作为 key，cls(*args, **kw) 作为 value 存到 instances 中，否则，直接返回 instances[cls]。</p>
+<h3 id="使用metaclass"><a href="#使用metaclass" class="headerlink" title="使用metaclass"></a>使用metaclass</h3><p>元类（metaclass）可以控制类的创建过程，它主要做三件事：</p>
+<ul>
+<li>拦截类的创建</li>
+<li>修改类的定义</li>
+<li>返回修改后的类<br>使用元类实现单例模式的代码如下：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class Singleton(type):</span><br><span class="line">    _instances = &#123;&#125;</span><br><span class="line">    def __call__(cls, *args, **kwargs):</span><br><span class="line">        <span class="keyword">if</span> cls not <span class="keyword">in</span> cls._instances:</span><br><span class="line">            cls._instances[cls] = <span class="keyword">super</span>(Singleton, cls).__call__(*args, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> cls._instances[cls]</span><br><span class="line"> </span><br><span class="line"># Python2</span><br><span class="line">class MyClass(object):</span><br><span class="line">    __metaclass__ = Singleton</span><br><span class="line"> </span><br><span class="line"># Python3</span><br><span class="line"># class MyClass(metaclass=Singleton):</span><br><span class="line">#    pass</span><br></pre></td></tr></table></figure>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>Python 的模块是天然的单例模式，这在大部分情况下应该是够用的，当然，我们也可以使用装饰器、元类等方法</p>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>工厂模式是一个在软件开发中用来创建对象的设计模式。</p>
+<p>工厂模式包涵一个超类。这个超类提供一个抽象化的接口来创建一个特定类型的对象，而不是决定哪个对象可以被创建。</p>
+<p>为了实现此方法，需要创建一个工厂类创建并返回。 </p>
+<p>当程序运行输入一个“类型”的时候，需要创建于此相应的对象。这就用到了工厂模式。在如此情形中，实现代码基于工厂模式，可以达到可扩展，可维护的代码。当增加一个新的类型，不在需要修改已存在的类，只增加能够产生新类型的子类。</p>
+<p>简短的说，当以下情形可以使用工厂模式：</p>
+<p>1.不知道用户想要创建什么样的对象</p>
+<p>2.当你想要创建一个可扩展的关联在创建类与支持创建对象的类之间。<br>需求：有一个学雷锋活动，有买米和扫地两个内容，参与的人有大学生和社区志愿者，他们各自的方法不一样。</p>
+<p>如果用简单工厂模式实现:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line"># factory.py 工厂方法设计模式</span><br><span class="line"># 根据传入参数的不同, 而返回对应的对象</span><br><span class="line"># 案例:你去一家餐厅,给厨子'番茄'和'鸡蛋',厨子返回给你'番茄炒鸡蛋';给厨子'白糖'和'黄瓜',厨子返回给你'白糖拌黄瓜'</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class TomatoesAndEgg:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.data = <span class="string">"男士喜欢吃番茄炒蛋"</span></span><br><span class="line"> </span><br><span class="line">    def getData(self):</span><br><span class="line">        <span class="keyword">return</span> self.data</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class SugarAndCucumber:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.data = <span class="number">123456</span></span><br><span class="line"> </span><br><span class="line">    def getData(self):</span><br><span class="line">        <span class="keyword">return</span> self.data</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"># 工厂方法: 根据传入参数的不同, 而返回对应的对象</span><br><span class="line">def cook_factory(sex):</span><br><span class="line">    <span class="keyword">if</span> sex == <span class="string">"man"</span>:</span><br><span class="line">        food = TomatoesAndEgg</span><br><span class="line">    elif sex == <span class="string">"woman"</span>:</span><br><span class="line">        food = SugarAndCucumber</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        raise ValueError(<span class="string">"请出入正确的性别: &#123;&#125;"</span>.format(sex))</span><br><span class="line">    <span class="keyword">return</span> food()</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    man = cook_factory(<span class="string">"man"</span>)</span><br><span class="line">    woman = cook_factory(<span class="string">"woman"</span>)</span><br><span class="line"> </span><br><span class="line">    data_man = man.getData()  # 返回String类型数据</span><br><span class="line">    data_woman = woman.getData()  # 返回int类型数据</span><br><span class="line">    # getData()返回不同类型的数据, 这在实际开发中是很常见的</span><br><span class="line"> </span><br><span class="line">    print(data_man)  # =&gt; 男士喜欢吃番茄炒蛋</span><br><span class="line">    print(data_woman)  # =&gt; 123456</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -433,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/06/PEP8编码规范/" rel="next" title="python的PEP8规范">
-                <i class="fa fa-chevron-left"></i> python的PEP8规范
+              <a href="/2018/09/06/FastDFS/" rel="next" title="FastDFS">
+                <i class="fa fa-chevron-left"></i> FastDFS
               </a>
             
           </div>
@@ -443,8 +469,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/06/Restful风格/" rel="prev" title="Restful风格">
-                Restful风格 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/08/列表生成式与匿名函数/" rel="prev" title="列表生成式与匿名函数">
+                列表生成式与匿名函数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-MVC各部分的功能："><span class="nav-number">1.</span> <span class="nav-text">Web MVC各部分的功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVT各部分的功能"><span class="nav-number">2.</span> <span class="nav-text">MVT各部分的功能</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">1.</span> <span class="nav-text">单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在python中实现单例的方法"><span class="nav-number">2.</span> <span class="nav-text">在python中实现单例的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用模块"><span class="nav-number">3.</span> <span class="nav-text">使用模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用new"><span class="nav-number">4.</span> <span class="nav-text">使用new</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用装饰器"><span class="nav-number">5.</span> <span class="nav-text">使用装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用metaclass"><span class="nav-number">6.</span> <span class="nav-text">使用metaclass</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">7.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式"><span class="nav-number"></span> <span class="nav-text">工厂模式</span></a></div>
             
 
           </div>
