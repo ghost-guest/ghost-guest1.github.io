@@ -88,17 +88,19 @@
 <meta property="og:site_name" content="Z H">
 <meta property="og:description" content="itsdangerous介绍有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。itsdan">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653316654.png">
-<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653349204.png">
-<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653449562.png">
-<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653629998.png">
-<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653704966.png">
-<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653978554.png">
-<meta property="og:updated_time" content="2018-09-11T08:20:28.975Z">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654330380.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654364997.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654410718.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654441240.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654460317.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654507656.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654572885.png">
+<meta property="og:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654600335.png">
+<meta property="og:updated_time" content="2018-09-11T08:30:04.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="itsdangerous">
 <meta name="twitter:description" content="itsdangerous介绍有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。itsdan">
-<meta name="twitter:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653316654.png">
+<meta name="twitter:image" content="http://pevsyd86b.bkt.clouddn.com/blogs/1536654330380.png">
 
 
 
@@ -367,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  864 字
+                  857 字
                 </span>
               
 
@@ -404,18 +406,15 @@
       
 
       
-        <h4 id="itsdangerous介绍"><a href="#itsdangerous介绍" class="headerlink" title="itsdangerous介绍"></a>itsdangerous介绍</h4><p>有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。<br>诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。<br>itsdangerous内部默认使用了HMAC和SHA1来签名，基于 Django 签名模块。它也支持JSON Web 签名 (JWS)。这个库采用BSD协议，由Armin Ronacher编写，而大部分设计与实现的版权归Simon Willison和其他的把这个库变为现实的Django爱好者们。<br>itsdangerous中dumps和loads：<br><img src="./images/1536653316654.png" alt="enter description here"><br><img src="./images/1536653349204.png" alt="enter description here"><br><img src="./images/1536653449562.png" alt="enter description here"></p>
-<h3 id="json，pickle-itsdangerous中的loads、dumps-的对比分析"><a href="#json，pickle-itsdangerous中的loads、dumps-的对比分析" class="headerlink" title="json，pickle, itsdangerous中的loads、dumps 的对比分析"></a>json，pickle, itsdangerous中的loads、dumps 的对比分析</h3><h4 id="1-json中的json-dumps和json-loads"><a href="#1-json中的json-dumps和json-loads" class="headerlink" title="1.json中的json.dumps和json.loads:"></a>1.json中的json.dumps和json.loads:</h4><p> json.dumps(): 将一个Python数据类型进行json格式的编码解析(dict转成str)<br> json.loads():将json格式的基于字典的字符串转换成Python数据类型（str转成dict）<br> <img src="./images/1536653629998.png" alt="enter description here"><br>    扩展：json.loads和json.load，json.dumps和json.dump的区别<br>     json.dump是将python数据保存成json。主要配合json.load来使用。<br>      json.dump(x,f)，x是对象，f是文件对象，将json数据写入到f文本文件当中。<br>      json.load是读取json数据 。主要配合json.dump来使用.<br>      <img src="./images/1536653704966.png" alt="enter description here"></p>
-<h4 id="2-pickle中的pickle-dumps和pickle-loads："><a href="#2-pickle中的pickle-dumps和pickle-loads：" class="headerlink" title="2. pickle中的pickle.dumps和pickle.loads："></a>2. pickle中的pickle.dumps和pickle.loads：</h4><pre><code>pickle.dumps():将obj对象序列化并返回一个bytes对象(某一个数据类型转成bytes).
-pickle.loads():将bytes反序列化并返回一个对象(bytes转成之前的数据类型).
-![enter description here](./images/1536653827776.png)
-扩展：pickle.loads和pickle.load，pickle.dumps和pickle.dump的区别
-</code></pre><p>pickle.dump()方法将obj对象序列化为字节（bytes）写入到file文件中<br>pickle.load()从一个对象文件中读取序列化数据，将其反序列化之后返回一个对象.</p>
+        <h4 id="itsdangerous介绍"><a href="#itsdangerous介绍" class="headerlink" title="itsdangerous介绍"></a>itsdangerous介绍</h4><p>有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。<br>诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。<br>itsdangerous内部默认使用了HMAC和SHA1来签名，基于 Django 签名模块。它也支持JSON Web 签名 (JWS)。这个库采用BSD协议，由Armin Ronacher编写，而大部分设计与实现的版权归Simon Willison和其他的把这个库变为现实的Django爱好者们。<br>itsdangerous中dumps和loads：<br><img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654330380.png" alt="enter description here"><br><img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654364997.png" alt="enter description here"><br><img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654410718.png" alt="enter description here"></p>
+<h3 id="json，pickle-itsdangerous中的loads、dumps-的对比分析"><a href="#json，pickle-itsdangerous中的loads、dumps-的对比分析" class="headerlink" title="json，pickle, itsdangerous中的loads、dumps 的对比分析"></a>json，pickle, itsdangerous中的loads、dumps 的对比分析</h3><h4 id="1-json中的json-dumps和json-loads"><a href="#1-json中的json-dumps和json-loads" class="headerlink" title="1.json中的json.dumps和json.loads:"></a>1.json中的json.dumps和json.loads:</h4><p> json.dumps(): 将一个Python数据类型进行json格式的编码解析(dict转成str)<br> json.loads():将json格式的基于字典的字符串转换成Python数据类型（str转成dict）<br> <img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654441240.png" alt="enter description here"><br>    扩展：json.loads和json.load，json.dumps和json.dump的区别<br>     json.dump是将python数据保存成json。主要配合json.load来使用。<br>      json.dump(x,f)，x是对象，f是文件对象，将json数据写入到f文本文件当中。<br>      json.load是读取json数据 。主要配合json.dump来使用.<br>     <img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654460317.png" alt="enter description here"></p>
+<h4 id="2-pickle中的pickle-dumps和pickle-loads："><a href="#2-pickle中的pickle-dumps和pickle-loads：" class="headerlink" title="2. pickle中的pickle.dumps和pickle.loads："></a>2. pickle中的pickle.dumps和pickle.loads：</h4><p>   pickle.dumps():将obj对象序列化并返回一个bytes对象(某一个数据类型转成bytes).<br>    pickle.loads():将bytes反序列化并返回一个对象(bytes转成之前的数据类型).<br>    <img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654507656.png" alt="enter description here"><br>    扩展：pickle.loads和pickle.load，pickle.dumps和pickle.dump的区别<br>pickle.dump()方法将obj对象序列化为字节（bytes）写入到file文件中<br>pickle.load()从一个对象文件中读取序列化数据，将其反序列化之后返回一个对象.<br><img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654572885.png" alt="enter description here"></p>
 <h4 id="3-json-pickle-itsdangerous对比总结"><a href="#3-json-pickle-itsdangerous对比总结" class="headerlink" title="3.json-pickle-itsdangerous对比总结:"></a>3.json-pickle-itsdangerous对比总结:</h4><p>1-pickle不是用于多种语言间的数据传输，它仅作为python对象的持久化，只针对python的数据类型；而json可以支持更多语言的序列化和反序列化，在python中序列化一个自定义的类对象时，会抛出一个 TypeError;<br>2-json的序列化输出是文本对象是str类型，而pickle序列化的输出是二进制字节-bytes</p>
 <p>3-json可读性优于pickle。</p>
 <p>4-itsdangerous也提供了一个与json或pickle类似的序列化接口。（它内部默认使用simplejson，但是可以通过子类进行修改）</p>
 <p>5-pickle:就是将python数据转成原始的二进制数据；<br>    itsdangerous:就是通过密钥secret-key进行加密处理。多用于生成token。</p>
-<h4 id="4-jsonify和json-dumps"><a href="#4-jsonify和json-dumps" class="headerlink" title="4.jsonify和json.dumps()"></a>4.jsonify和json.dumps()</h4><p>sonify的作用实际上就是将我们传入的json形式数据序列化成为json字符串，作为响应的body，并且设置响应的Content-Type为application/json，构造出响应返回至客户端。jsonify的部分源码如下：<br><img src="./images/1536653978554.png" alt="enter description here"><br>jsonify将dict类型转变为json对象。json.dumps只是将dict类型转化为str类型，并非一个json对象。<br>jsonify其实也是用dumps方法转换成了json格式的字符串，但是jsonify会根据http协议的body进行格式重新编排。而json.dumps只是单纯的将dict类型转化为str类型，可以直接return json.dumps(data)。</p>
+<h4 id="4-jsonify和json-dumps"><a href="#4-jsonify和json-dumps" class="headerlink" title="4.jsonify和json.dumps()"></a>4.jsonify和json.dumps()</h4><p>sonify的作用实际上就是将我们传入的json形式数据序列化成为json字符串，作为响应的body，并且设置响应的Content-Type为application/json，构造出响应返回至客户端。jsonify的部分源码如下：<br><img src="http://pevsyd86b.bkt.clouddn.com/blogs/1536654600335.png" alt="enter description here"></p>
+<p>jsonify将dict类型转变为json对象。json.dumps只是将dict类型转化为str类型，并非一个json对象。<br>jsonify其实也是用dumps方法转换成了json格式的字符串，但是jsonify会根据http协议的body进行格式重新编排。而json.dumps只是单纯的将dict类型转化为str类型，可以直接return json.dumps(data)。</p>
 
       
     </div>
