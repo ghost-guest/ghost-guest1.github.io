@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="Z H">
 <meta property="og:description" content="列表生成式[x * x for x in range(1, 11)] 就是一个列表生成式, 它的基础语法是:[exp for iter_var in iterable]首先迭代 iterable 里所有内容, 每一次迭代, 都把 iterable 里相应内容放到 iter_var 中, 再在表达式 exp 中应用该 iter_var 的内容, 最后用表达式的计算值生成一个新的列表.例如, 把一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-08T14:04:28.009Z">
+<meta property="og:updated_time" content="2018-09-10T08:27:27.867Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="列表生成式与匿名函数">
 <meta name="twitter:description" content="列表生成式[x * x for x in range(1, 11)] 就是一个列表生成式, 它的基础语法是:[exp for iter_var in iterable]首先迭代 iterable 里所有内容, 每一次迭代, 都把 iterable 里相应内容放到 iter_var 中, 再在表达式 exp 中应用该 iter_var 的内容, 最后用表达式的计算值生成一个新的列表.例如, 把一个">
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  578 字
+                  1.2k 字
                 </span>
               
 
@@ -376,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -410,6 +410,21 @@
 <p>注意: s.strip(rm) 删除 s 字符串中开头、结尾处的 rm 序列的字符。</p>
 <p>当rm为空时，默认删除空白符（包括’\n’, ‘\r’, ‘\t’, ‘ ‘)，如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = <span class="string">' 123'</span></span><br><span class="line">&gt;&gt;&gt; a.strip()</span><br><span class="line"><span class="string">'123'</span></span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a = <span class="string">'\t\t123\r\n'</span></span><br><span class="line">&gt;&gt;&gt; a.strip()</span><br><span class="line"><span class="string">'123'</span></span><br></pre></td></tr></table></figure>
+<h3 id="reduce函数"><a href="#reduce函数" class="headerlink" title="reduce函数"></a>reduce函数</h3><p>reduce() 函数会对参数序列中元素进行累积。</p>
+<p>函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：用传给 reduce 中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，得到的结果再与第三个数据用 function 函数运算，最后得到一个结果。<br>reduce() 函数在 python 2 是内置函数， 从python 3 开始移到了 functools 模块。<br>例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">求每个单词出现的次数：</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">str = <span class="string">"an apple a banana three apple a desk"</span></span><br><span class="line">list = str.split(<span class="string">' '</span>)</span><br><span class="line">print(list)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def fun(x, y):</span><br><span class="line">    <span class="keyword">if</span> y <span class="keyword">in</span> x:</span><br><span class="line">        x[y] = x[y] + <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x[y] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = reduce(fun, list, &#123;&#125;)</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>格式：<br>lambda arg1,arg2,…..argn:expression</p>
+<p>#冒号:之前的arg1，arg2…表示它们是这个函数的参数。</p>
+<p>#匿名函数不需要return来返回值，表达式本身结果就是返回值。<br>1 匿名函数即没有绑定名字的函数，没有绑定名字，意味着只能用一次就会被回收。<br>2 所以说匿名函数的应用场景就是：某个功能只用一次就结束了。<br>例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s = "this is\na\ttest" #建此字符串按照正常情形输出</span><br><span class="line">&gt;&gt;&gt; s</span><br><span class="line"><span class="string">'this is\na\ttest'</span></span><br><span class="line">&gt;&gt;&gt; print s.split() #split函数默认分割:空格，换行符，TAB</span><br><span class="line">[<span class="string">'this'</span>, <span class="string">'is'</span>, <span class="string">'a'</span>, <span class="string">'test'</span>]</span><br><span class="line">&gt;&gt;&gt; ' '.join(s.split()) #用join函数转一个列表为字符串</span><br><span class="line"><span class="string">'this is a test'</span></span><br><span class="line"></span><br><span class="line">等价于</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; (lambda s:<span class="string">' '</span>.join(s.split()))(<span class="string">"this is\na\ttest"</span>)</span><br></pre></td></tr></table></figure>
+<p>无参数的匿名函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; t = lambda : True #分号前无任何参数</span><br><span class="line">&gt;&gt;&gt; t()</span><br><span class="line">True</span><br><span class="line"></span><br><span class="line">等价于下面的def定义的函数</span><br><span class="line">&gt;&gt;&gt; def func(): <span class="keyword">return</span> True</span><br><span class="line">&gt;&gt;&gt; func()</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<p> 和map及list联合使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="keyword">import</span> sys</span><br><span class="line">&gt;&gt;&gt; showall = lambda x:list(map(sys.stdout.write,x))</span><br><span class="line">&gt;&gt;&gt; showall([<span class="string">'Jerry\n'</span>,<span class="string">'Sherry\n'</span>,<span class="string">'Alice\n'</span>])</span><br><span class="line">Jerry</span><br><span class="line">Sherry</span><br><span class="line">Alice</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; showall([<span class="string">'Jerry'</span>,<span class="string">'Sherry'</span>,<span class="string">'Alice'</span>])</span><br><span class="line">JerrySherryAlice</span><br><span class="line"></span><br><span class="line">等价于下面</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; showall = lambda x: [sys.stdout.write(line) <span class="keyword">for</span> line <span class="keyword">in</span> x]</span><br><span class="line">&gt;&gt;&gt; showall((<span class="string">'I\t'</span>,<span class="string">'Love\t'</span>,<span class="string">'You!'</span>))</span><br><span class="line">I Love You![None, None, None]</span><br></pre></td></tr></table></figure>
+<p>求2-50之间的素数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#素数:只能被1或被自己整除的数</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; nums = range(<span class="number">2</span>,<span class="number">50</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">nums = filter(lambda x:x==i or x % i,nums)</span><br><span class="line">&gt;&gt;&gt; nums</span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>, <span class="number">41</span>, <span class="number">43</span>, <span class="number">47</span>]</span><br></pre></td></tr></table></figure>
+<p>求字符串每个单词的长度：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; sentence = <span class="string">"Welcome To Beijing!"</span></span><br><span class="line">&gt;&gt;&gt; words = sentence.split()</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; lengths = map(lambda x:len(x),words)</span><br><span class="line">&gt;&gt;&gt; lengths</span><br><span class="line">[<span class="number">7</span>, <span class="number">2</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -451,6 +466,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/10/python三大神器/" rel="prev" title="python三大神器">
+                python三大神器 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -531,7 +550,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -594,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表生成式"><span class="nav-number">1.</span> <span class="nav-text">列表生成式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map（）函数"><span class="nav-number">2.</span> <span class="nav-text">map（）函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter（）函数"><span class="nav-number">3.</span> <span class="nav-text">filter（）函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#列表生成式"><span class="nav-number">1.</span> <span class="nav-text">列表生成式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map（）函数"><span class="nav-number">2.</span> <span class="nav-text">map（）函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter（）函数"><span class="nav-number">3.</span> <span class="nav-text">filter（）函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduce函数"><span class="nav-number">4.</span> <span class="nav-text">reduce函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名函数"><span class="nav-number">5.</span> <span class="nav-text">匿名函数</span></a></li></ol></div>
             
 
           </div>

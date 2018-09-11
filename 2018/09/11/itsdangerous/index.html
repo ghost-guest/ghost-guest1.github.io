@@ -81,17 +81,24 @@
 
 
 
-<meta name="description" content="MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。 Web MVC各部分的功能：1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。2.View：用于封装结果，生成页面html内容与用户进行交互。3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。 MVT： Django 遵循MV">
+<meta name="description" content="itsdangerous介绍有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。itsdan">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVT与MCV">
-<meta property="og:url" content="http://ghost-guest@github.io/2018/09/06/MVT与MCV/index.html">
+<meta property="og:title" content="itsdangerous">
+<meta property="og:url" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/index.html">
 <meta property="og:site_name" content="Z H">
-<meta property="og:description" content="MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。 Web MVC各部分的功能：1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。2.View：用于封装结果，生成页面html内容与用户进行交互。3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。 MVT： Django 遵循MV">
+<meta property="og:description" content="itsdangerous介绍有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。itsdan">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-06T09:11:43.218Z">
+<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653316654.png">
+<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653349204.png">
+<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653449562.png">
+<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653629998.png">
+<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653704966.png">
+<meta property="og:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653978554.png">
+<meta property="og:updated_time" content="2018-09-11T08:20:28.975Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVT与MCV">
-<meta name="twitter:description" content="MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。 Web MVC各部分的功能：1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。2.View：用于封装结果，生成页面html内容与用户进行交互。3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。 MVT： Django 遵循MV">
+<meta name="twitter:title" content="itsdangerous">
+<meta name="twitter:description" content="itsdangerous介绍有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。itsdan">
+<meta name="twitter:image" content="http://ghost-guest@github.io/2018/09/11/itsdangerous/images/1536653316654.png">
 
 
 
@@ -121,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://ghost-guest@github.io/2018/09/06/MVT与MCV/"/>
+  <link rel="canonical" href="http://ghost-guest@github.io/2018/09/11/itsdangerous/"/>
 
 
 
 
 
-  <title>MVT与MCV | Z H</title>
+  <title>itsdangerous | Z H</title>
   
 
 
@@ -299,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ghost-guest@github.io/2018/09/06/MVT与MCV/">
+    <link itemprop="mainEntityOfPage" href="http://ghost-guest@github.io/2018/09/11/itsdangerous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Z H">
@@ -316,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MVT与MCV</h1>
+          <h1 class="post-title" itemprop="name headline">itsdangerous</h1>
         
 
         <div class="post-meta">
@@ -328,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T16:55:13+08:00">
-                2018-09-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T14:59:07+08:00">
+                2018-09-11
               </time>
             
 
@@ -360,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  206 字
+                  864 字
                 </span>
               
 
@@ -376,7 +383,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -397,10 +404,18 @@
       
 
       
-        <p>MVC的核心思想：解耦，让不同的代码之间降低耦合，增强代码的可移植性和可扩展性，实现向后兼容。</p>
-<h3 id="Web-MVC各部分的功能："><a href="#Web-MVC各部分的功能：" class="headerlink" title="Web MVC各部分的功能："></a>Web MVC各部分的功能：</h3><p>1.Model：主要封装了对数据库层的的访问，对数据库中的数据进行增，删，改，查操作。<br>2.View：用于封装结果，生成页面html内容与用户进行交互。<br>3.Controller：用于接受请求，处理业务逻辑，与Model和View交互，返回结果。</p>
-<p>MVT： Django 遵循MVC设计，并有一个专有名词：MVT</p>
-<h3 id="MVT各部分的功能"><a href="#MVT各部分的功能" class="headerlink" title="MVT各部分的功能"></a>MVT各部分的功能</h3><p>1.Model： 负责与数据库交互，进行数据操作。<br>2.View：与MVC中的C的功能一样，接受请求，处理业务，返回应答。<br>3.Template： 与MVC中的V的功能一样，负责封装要返回的html。</p>
+        <h4 id="itsdangerous介绍"><a href="#itsdangerous介绍" class="headerlink" title="itsdangerous介绍"></a>itsdangerous介绍</h4><p>有时候你想向不可信的环境发送一些数据，但如何安全完成这个任务呢？解决的方法就是签名。使用只有你自己知道的密钥，来加密签名你的数据，并把加密后的数据发给别人。当你取回数据时，你就可以确保没人篡改过这份数据。<br>诚然，接收者可以破译内容，来看看你的包裹里有什么，但他们没办法修改你的内容，除非他们也有你的密钥。所以只要你保管好你的密钥，并且密钥足够复杂，一切就OK了。<br>itsdangerous内部默认使用了HMAC和SHA1来签名，基于 Django 签名模块。它也支持JSON Web 签名 (JWS)。这个库采用BSD协议，由Armin Ronacher编写，而大部分设计与实现的版权归Simon Willison和其他的把这个库变为现实的Django爱好者们。<br>itsdangerous中dumps和loads：<br><img src="./images/1536653316654.png" alt="enter description here"><br><img src="./images/1536653349204.png" alt="enter description here"><br><img src="./images/1536653449562.png" alt="enter description here"></p>
+<h3 id="json，pickle-itsdangerous中的loads、dumps-的对比分析"><a href="#json，pickle-itsdangerous中的loads、dumps-的对比分析" class="headerlink" title="json，pickle, itsdangerous中的loads、dumps 的对比分析"></a>json，pickle, itsdangerous中的loads、dumps 的对比分析</h3><h4 id="1-json中的json-dumps和json-loads"><a href="#1-json中的json-dumps和json-loads" class="headerlink" title="1.json中的json.dumps和json.loads:"></a>1.json中的json.dumps和json.loads:</h4><p> json.dumps(): 将一个Python数据类型进行json格式的编码解析(dict转成str)<br> json.loads():将json格式的基于字典的字符串转换成Python数据类型（str转成dict）<br> <img src="./images/1536653629998.png" alt="enter description here"><br>    扩展：json.loads和json.load，json.dumps和json.dump的区别<br>     json.dump是将python数据保存成json。主要配合json.load来使用。<br>      json.dump(x,f)，x是对象，f是文件对象，将json数据写入到f文本文件当中。<br>      json.load是读取json数据 。主要配合json.dump来使用.<br>      <img src="./images/1536653704966.png" alt="enter description here"></p>
+<h4 id="2-pickle中的pickle-dumps和pickle-loads："><a href="#2-pickle中的pickle-dumps和pickle-loads：" class="headerlink" title="2. pickle中的pickle.dumps和pickle.loads："></a>2. pickle中的pickle.dumps和pickle.loads：</h4><pre><code>pickle.dumps():将obj对象序列化并返回一个bytes对象(某一个数据类型转成bytes).
+pickle.loads():将bytes反序列化并返回一个对象(bytes转成之前的数据类型).
+![enter description here](./images/1536653827776.png)
+扩展：pickle.loads和pickle.load，pickle.dumps和pickle.dump的区别
+</code></pre><p>pickle.dump()方法将obj对象序列化为字节（bytes）写入到file文件中<br>pickle.load()从一个对象文件中读取序列化数据，将其反序列化之后返回一个对象.</p>
+<h4 id="3-json-pickle-itsdangerous对比总结"><a href="#3-json-pickle-itsdangerous对比总结" class="headerlink" title="3.json-pickle-itsdangerous对比总结:"></a>3.json-pickle-itsdangerous对比总结:</h4><p>1-pickle不是用于多种语言间的数据传输，它仅作为python对象的持久化，只针对python的数据类型；而json可以支持更多语言的序列化和反序列化，在python中序列化一个自定义的类对象时，会抛出一个 TypeError;<br>2-json的序列化输出是文本对象是str类型，而pickle序列化的输出是二进制字节-bytes</p>
+<p>3-json可读性优于pickle。</p>
+<p>4-itsdangerous也提供了一个与json或pickle类似的序列化接口。（它内部默认使用simplejson，但是可以通过子类进行修改）</p>
+<p>5-pickle:就是将python数据转成原始的二进制数据；<br>    itsdangerous:就是通过密钥secret-key进行加密处理。多用于生成token。</p>
+<h4 id="4-jsonify和json-dumps"><a href="#4-jsonify和json-dumps" class="headerlink" title="4.jsonify和json.dumps()"></a>4.jsonify和json.dumps()</h4><p>sonify的作用实际上就是将我们传入的json形式数据序列化成为json字符串，作为响应的body，并且设置响应的Content-Type为application/json，构造出响应返回至客户端。jsonify的部分源码如下：<br><img src="./images/1536653978554.png" alt="enter description here"><br>jsonify将dict类型转变为json对象。json.dumps只是将dict类型转化为str类型，并非一个json对象。<br>jsonify其实也是用dumps方法转换成了json格式的字符串，但是jsonify会根据http协议的body进行格式重新编排。而json.dumps只是单纯的将dict类型转化为str类型，可以直接return json.dumps(data)。</p>
 
       
     </div>
@@ -433,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/06/PEP8编码规范/" rel="next" title="python的PEP8规范">
-                <i class="fa fa-chevron-left"></i> python的PEP8规范
+              <a href="/2018/09/10/python三大神器/" rel="next" title="python三大神器">
+                <i class="fa fa-chevron-left"></i> python三大神器
               </a>
             
           </div>
@@ -442,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/06/Restful风格/" rel="prev" title="Restful风格">
-                Restful风格 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -589,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-MVC各部分的功能："><span class="nav-number">1.</span> <span class="nav-text">Web MVC各部分的功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVT各部分的功能"><span class="nav-number">2.</span> <span class="nav-text">MVT各部分的功能</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#itsdangerous介绍"><span class="nav-number">1.</span> <span class="nav-text">itsdangerous介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json，pickle-itsdangerous中的loads、dumps-的对比分析"><span class="nav-number"></span> <span class="nav-text">json，pickle, itsdangerous中的loads、dumps 的对比分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-json中的json-dumps和json-loads"><span class="nav-number">1.</span> <span class="nav-text">1.json中的json.dumps和json.loads:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-pickle中的pickle-dumps和pickle-loads："><span class="nav-number">2.</span> <span class="nav-text">2. pickle中的pickle.dumps和pickle.loads：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-json-pickle-itsdangerous对比总结"><span class="nav-number">3.</span> <span class="nav-text">3.json-pickle-itsdangerous对比总结:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-jsonify和json-dumps"><span class="nav-number">4.</span> <span class="nav-text">4.jsonify和json.dumps()</span></a></li></ol></div>
             
 
           </div>
