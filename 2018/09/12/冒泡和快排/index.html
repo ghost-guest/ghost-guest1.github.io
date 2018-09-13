@@ -81,14 +81,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://ghost-guest@github.io/categories/index.html">
+<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960&amp;apos;&amp;apos;&amp;apos;冒泡排序的概念:取出列表中的当前值与下一个值进行比较，比较完成后，向列表的最后方或最前方浮动（一次浮动一个位置）外层for循环-&amp;gt;控制列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="冒泡和快排">
+<meta property="og:url" content="http://ghost-guest@github.io/2018/09/12/冒泡和快排/index.html">
 <meta property="og:site_name" content="Z H">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960&amp;apos;&amp;apos;&amp;apos;冒泡排序的概念:取出列表中的当前值与下一个值进行比较，比较完成后，向列表的最后方或最前方浮动（一次浮动一个位置）外层for循环-&amp;gt;控制列">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T13:32:13.673Z">
+<meta property="og:updated_time" content="2018-09-12T08:01:19.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="冒泡和快排">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960&amp;apos;&amp;apos;&amp;apos;冒泡排序的概念:取出列表中的当前值与下一个值进行比较，比较完成后，向列表的最后方或最前方浮动（一次浮动一个位置）外层for循环-&amp;gt;控制列">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://ghost-guest@github.io/categories/"/>
+  <link rel="canonical" href="http://ghost-guest@github.io/2018/09/12/冒泡和快排/"/>
 
 
 
 
 
-  <title>categories | Z H</title>
+  <title>冒泡和快排 | Z H</title>
   
 
 
@@ -284,40 +287,176 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ghost-guest@github.io/2018/09/12/冒泡和快排/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Z H">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z H">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                暂无分类
-            </div>
-            <div class="category-all">
+          <h1 class="post-title" itemprop="name headline">冒泡和快排</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T15:44:07+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  625 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
               
             </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;</span><br><span class="line">冒泡排序的概念:</span><br><span class="line">取出列表中的当前值与下一个值进行比较，比较完成后，向列表的最后方或最前方浮动（一次浮动一个位置）</span><br><span class="line">外层for循环-&gt;控制列表中余下比较元素的个数</span><br><span class="line">内层for循环-&gt;控制当前循环比较的元素</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">#冒泡排序</span><br><span class="line">def maoPao(infos):</span><br><span class="line">    for i in range(len(infos) - 1):</span><br><span class="line">        for j in range(len(infos) - 1 - i):</span><br><span class="line">            if infos[j] &gt; infos[j+1]:</span><br><span class="line">                infos[j],infos[j+1] = infos[j+1],infos[j]</span><br><span class="line">    return infos</span><br><span class="line"> </span><br><span class="line">#列表lists使用冒泡从小到大排序</span><br><span class="line">lists = [33,12,8,88,10,6,5,18]</span><br><span class="line">res = maoPao(lists)</span><br><span class="line">print(res)</span><br><span class="line"> </span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">快排的概念:</span><br><span class="line">取出需要排序的列表中的第一个（下面案例为取出第一个）或者最后一个元素，作为参照元素</span><br><span class="line">使用for循环，拿列表中第[1:last]（第二个到最后一个元素）依次和列表的第一个元素进行比较</span><br><span class="line">如果for循环的当前元素比第一个元素大，则定义一个max列表，并把当前元素加入其中</span><br><span class="line">如果for循环的当前元素比第一个元素小，则定义一个min列表，并把当前元素加入其中</span><br><span class="line">若返回从小到大的排序，则使用 |min + 第一个值（列表中的比较元素）+ max| 返回</span><br><span class="line">注意返回列表中的min和max列表，应使用递归函数，再次调用当前排序函数</span><br><span class="line">最后在排序函数逻辑开始的地方</span><br><span class="line">判断传入的列表（需要排序的列表）长度是否&lt;=1（小于等于1）</span><br><span class="line">如果满足&lt;=1</span><br><span class="line">则返回正在递归中的传入列表</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">#快速排序（快排）</span><br><span class="line">#普通写法</span><br><span class="line">def quick(infos):</span><br><span class="line">    if len(infos) &lt;= 1:</span><br><span class="line">        return infos</span><br><span class="line">    mins = []</span><br><span class="line">    maxs = []</span><br><span class="line">    for v in infos[1:]:</span><br><span class="line">        if v &gt; infos[0]:</span><br><span class="line">            maxs.append(v)</span><br><span class="line">        elif v &lt; infos[0]:</span><br><span class="line">            mins.append(v)</span><br><span class="line">    return quick(mins) + infos[0:1] + quick(maxs)#注意！这里如果用info[0]取值，取出的时列表中的int值。所以return拼接的列表时，应用infos[0:1]取值，这样取出的是一个内含一个元素的列表，返回拼接列表的时候就不会报错了！</span><br><span class="line"> </span><br><span class="line">lists = [33,12,8,88,10,6,5,18]</span><br><span class="line">res = quick(lists)</span><br><span class="line">print(res)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#list推导式写法</span><br><span class="line">def quick_tds(infos):</span><br><span class="line">    if len(infos) &lt;= 1:</span><br><span class="line">        return infos</span><br><span class="line">    return quick_tds([v for v in infos[1:] if v&lt;infos[0]] + infos[0:1]) + quick_tds([v for v in infos[1:] if v&gt;infos[0]])</span><br><span class="line"> </span><br><span class="line">lists = [33,12,8,88,10,6,5,18]</span><br><span class="line">res = quick_tds(lists)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/12/ES/" rel="next" title="ES">
+                <i class="fa fa-chevron-left"></i> ES
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
